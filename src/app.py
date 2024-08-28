@@ -44,7 +44,7 @@ def check_if_token_revoked(jwt_header, jwt_payload: dict) -> bool:
         return is_blocked
 
 
-cred = credentials.Certificate("firebase_key.json")
+cred = credentials.Certificate(os.getenv("FIREBASE_KEY_FILE"))
 firebase_admin.initialize_app(cred, {
     'storageBucket': 'clase-imagenes-flask.appspot.com'
 })
