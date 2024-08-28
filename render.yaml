@@ -23,7 +23,7 @@ services:
             fromDatabase:
                 name: postgresql-trapezoidal-42170
                 property: connectionString
-        - fromGroup: spain-env-vars
+          - fromGroup: spain-env-vars
 
 #          - key: FLASK_APP_KEY # Imported from Heroku app
 #            sync: false
