@@ -23,40 +23,42 @@ services:
             fromDatabase:
                 name: postgresql-trapezoidal-42170
                 property: connectionString
-          - key: FLASK_APP_KEY # Imported from Heroku app
-            sync: false
+        - fromGroup: spain-env-vars
 
-          - key: JWT_SECRET
-            sync: false
-
-          - key: BACKEND_URL
-            sync: false
-
-          - key: FRONTEND_URL
-            sync: false
-
-          - key: MAIL_SERVICE_ID
-            sync: false
-
-          - key: MAIL_PRIVATE_KEY
-            sync: false
-
-          - key: MAIL_TEMPLATE_ID
-            sync: false
-
-          - key: MAIL_USER_ID
-            sync: false
-
-          - key: MAIL_SEND_URL
-            sync: false
-
-          - key: SEED_DATA
-            type: "file"
-            sync: false
-
-          - key: FIREBASE_KEY_FILE
-            type: "file"
-            sync: false
+#          - key: FLASK_APP_KEY # Imported from Heroku app
+#            sync: false
+#
+#          - key: JWT_SECRET
+#            sync: false
+#
+#          - key: BACKEND_URL
+#            sync: false
+#
+#          - key: FRONTEND_URL
+#            sync: false
+#
+#          - key: MAIL_SERVICE_ID
+#            sync: false
+#
+#          - key: MAIL_PRIVATE_KEY
+#            sync: false
+#
+#          - key: MAIL_TEMPLATE_ID
+#            sync: false
+#
+#          - key: MAIL_USER_ID
+#            sync: false
+#
+#          - key: MAIL_SEND_URL
+#            sync: false
+#
+#          - key: SEED_DATA
+#            type: "file"
+#            sync: false
+#
+#          - key: FIREBASE_KEY_FILE
+#            type: "file"
+#            sync: false
 
 
 databases: # Render PostgreSQL database
