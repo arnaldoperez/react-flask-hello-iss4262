@@ -43,6 +43,8 @@ services:
             value: ""
           - key: SEED_DATA
             value: ""
+          - key: FIREBASE_KEY_FILE
+            value: ""
 
 databases: # Render PostgreSQL database
     - name: postgresql-trapezoidal-42170
