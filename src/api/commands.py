@@ -35,7 +35,9 @@ def setup_commands(app):
 
     @app.cli.command("insert-test-data")
     def insert_test_data():
+        print("Loading data....")
         seeder = ResolvingSeeder(db.session)
         seeder.register(User)
-        new_entities = seeder.load_entities_from_json_file(getenv("SEED_DATA"))
+        seeder.load_entities_from_json_file(getenv("SEED_DATA"))
         db.session.commit()
+        print("Data loaded!!")

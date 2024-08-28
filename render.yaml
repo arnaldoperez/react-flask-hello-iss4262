@@ -17,14 +17,32 @@ services:
             value: src/app.py
           - key: FLASK_DEBUG # Imported from Heroku app
             value: 0
-          - key: FLASK_APP_KEY # Imported from Heroku app
-            value: "any key works"
           - key: PYTHON_VERSION
             value: 3.10.6
           - key: DATABASE_URL # Render PostgreSQL database
             fromDatabase:
                 name: postgresql-trapezoidal-42170
                 property: connectionString
+          - key: FLASK_APP_KEY # Imported from Heroku app
+            value: ""
+          - key: JWT_SECRET
+            value: ""
+          - key: BACKEND_URL
+            value: ""
+          - key: FRONTEND_URL
+            value: ""
+          - key: MAIL_SERVICE_ID
+            value: ""
+          - key: MAIL_PRIVATE_KEY
+            value: ""
+          - key: MAIL_TEMPLATE_ID
+            value: ""
+          - key: MAIL_USER_ID
+            value: ""
+          - key: MAIL_SEND_URL
+            value: ""
+          - key: SEED_DATA
+            value: ""
 
 databases: # Render PostgreSQL database
     - name: postgresql-trapezoidal-42170
