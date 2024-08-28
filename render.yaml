@@ -51,9 +51,11 @@ services:
             sync: false
 
           - key: SEED_DATA
+            type: "file"
             sync: false
 
           - key: FIREBASE_KEY_FILE
+            type: "file"
             sync: false
 
 
