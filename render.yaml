@@ -24,27 +24,38 @@ services:
                 name: postgresql-trapezoidal-42170
                 property: connectionString
           - key: FLASK_APP_KEY # Imported from Heroku app
-            value: ""
+            sync: false
+
           - key: JWT_SECRET
-            value: ""
+            sync: false
+
           - key: BACKEND_URL
-            value: ""
+            sync: false
+
           - key: FRONTEND_URL
-            value: ""
+            sync: false
+
           - key: MAIL_SERVICE_ID
-            value: ""
+            sync: false
+
           - key: MAIL_PRIVATE_KEY
-            value: ""
+            sync: false
+
           - key: MAIL_TEMPLATE_ID
-            value: ""
+            sync: false
+
           - key: MAIL_USER_ID
-            value: ""
+            sync: false
+
           - key: MAIL_SEND_URL
-            value: ""
+            sync: false
+
           - key: SEED_DATA
-            value: ""
+            sync: false
+
           - key: FIREBASE_KEY_FILE
-            value: ""
+            sync: false
+
 
 databases: # Render PostgreSQL database
     - name: postgresql-trapezoidal-42170
